@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Automatic Group Buff Assignments</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="p-3 mb-2 bg-secondary text-white">
+<h1>Automatic Group Buff Assignments</h1>
+
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="input-group" aria-colcount="20">
+        <table>
+            <tr>
+                <td>
+            {{ form.raid_group_qty.label(class_="input-group-text") }}
+                </td>
+                <td>
+            {{ form.raid_group_qty }}
+                </td>
+            </tr>
+            <tr>
+            {{ form.priests_list.label(class_="input-group-text") }}
+            {{ form.priests_list }}
+            </tr>
+        </table>
+
+    </div>
+<div>
+    <button type="reset" class="btn btn-danger">Clear</button>
+    {{ form.submit_btn(class_="btn btn-light") }}
+</div>
+    <div>
+        <h3>Output</h3>
+        {{ form.assignment_output }}
+    </div>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>
